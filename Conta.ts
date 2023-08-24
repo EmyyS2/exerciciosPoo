@@ -52,7 +52,7 @@ console.log(".");
 console.log(".");
 console.log(".");
 
-let Duardo=new ContaBancaria("Duardo", 2000)
+let Duardo=new ContaBancaria("Duardo", 4000)
 console.log(Duardo.meuSaldo());
 console.log("");
 console.log(Duardo.deposito(500));
