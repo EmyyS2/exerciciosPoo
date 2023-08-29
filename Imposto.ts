@@ -29,5 +29,12 @@ class Funcionario {
 }
 let Ana = new Funcionario("Ana Silva", "Analista de Vendas", 3000.00, 11, 7.5)
 console.log(Ana.perfil())
-console.log(Ana.calcularAumento(50))
+console.log(Ana.calcularAumento(10))
 console.log(Ana.calcularImpostos())
+console.log(".")
+console.log(".")
+console.log(".")
+let Dorothy = new Funcionario("Dorothy", "Desing", 5000.00, 11, 7.5)
+console.log(Dorothy.perfil())
+console.log(Dorothy.calcularAumento(10))
+console.log(Dorothy.calcularImpostos())
