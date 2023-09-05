@@ -28,9 +28,11 @@ class Agenda {
         console.log(this.eventos[i].nome +" no dia "+this.eventos[i].dia+" às "+this.eventos[i].horario);
     }
     }
-    apagar() {
-        this.eventos.splice(0, 1);
-        return 'seu evento foi apagado'
+    apagar(evento:Evento) {
+        this.eventos= this.eventos.filter(item =>item.nome!= evento.nome);
+
+        return "Evento apagado"
+
 
     }
 }
@@ -42,5 +44,6 @@ meusEventos.adicionarEventos(evento1);
 meusEventos.adicionarEventos(evento2);
 meusEventos.adicionarEventos(evento3);
 console.log(meusEventos.listarEventos());
-console.log(meusEventos.apagar());
+console.log("");
+console.log(meusEventos.apagar(evento3));
 console.log(meusEventos.listarEventos());
