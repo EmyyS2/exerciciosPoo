@@ -20,6 +20,8 @@ class Agenda {
         }
     }
     apagar() {
+        this.eventos.splice(0, 1);
+        return 'seu evento foi apagado';
     }
 }
 const evento1 = new Evento("casamento", "10", "20h");
@@ -29,4 +31,6 @@ const meusEventos = new Agenda();
 meusEventos.adicionarEventos(evento1);
 meusEventos.adicionarEventos(evento2);
 meusEventos.adicionarEventos(evento3);
+console.log(meusEventos.listarEventos());
+console.log(meusEventos.apagar());
 console.log(meusEventos.listarEventos());
