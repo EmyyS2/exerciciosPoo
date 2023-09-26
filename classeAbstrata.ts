@@ -9,9 +9,9 @@ abstract class Animal{
 
     abstract FazerBarulho(): void;
 
-    Apresentar(): void{
+   Apresentar(): void{
         console.log("Este é um " + this.nome + "com " + this.patas + "patas.");
-    }
+    } 
 }
 
 class Dog extends Animal{
@@ -19,7 +19,7 @@ class Dog extends Animal{
         super("Cachorro", 4);
     }
     FazerBarulho(): void {
-        console.log("O Reginaldo está latindo");
+        console.log("O cachorro está latindo");
     }
 }
 
@@ -28,7 +28,7 @@ class Cat extends Animal{
         super("Gato", 4);
     }
     FazerBarulho(): void {
-        console.log("A mãe do Reginaldo está miando");
+        console.log("O gato está miando");
     }
 }
 
@@ -37,7 +37,7 @@ class Bird extends Animal{
         super("Pássaro", 2);
     }
     FazerBarulho(): void {
-        console.log("O pai do Reginaldo está cantando");
+        console.log("O pássaro está cantando");
     }
 }
 
