@@ -43,7 +43,7 @@ class ContaCorrente extends ContaBancariaDois {
 }
 class ContaPoupanca extends ContaBancariaDois {
     constructor() {
-        super("987632", 1000, "Emy")
+        super("987632", 2000,"Emi")
     }
     depositar(valor: number): void {
         this.saldoInicial = this.saldoInicial + valor
@@ -61,13 +61,12 @@ class ContaPoupanca extends ContaBancariaDois {
     }
     consultarSaldo(): number {
         this.saldoInicial = this.saldoInicial;
-        console.log("Olá " + this.titular + " dono(a) da conta de numero" + this.numeroConta + " você tem R$ " + this.saldoInicial);
+        console.log("Olá " + this.titular + " dono(a) da conta de numero " + this.numeroConta + " você tem R$ " + this.saldoInicial);
         return this.saldoInicial;
     }
     calcularRendimentoAnual(taxa: number): number{
-        taxa:0.2;
-        this.saldoInicial=taxa * this.saldoInicial;
-        console.log("Seu rendimento Anul foi de R$"+this.saldoInicial)
+        this.saldoInicial=taxa * this.saldoInicial + this.saldoInicial;
+        console.log("Seu rendimento Anul foi de R$ "+this.saldoInicial)
         return this.saldoInicial
     }
 }
@@ -96,18 +95,28 @@ class ContaInvestimento extends ContaBancariaDois{
     }
      investir(valor: number, prazoMeses:
         number, taxaJuros: number): void{
-            valor=20;
-            prazoMeses=12
-            taxaJuros=0.2
-            valor*12*0.2+this.saldoInicial
+           
+            this.saldoInicial=valor*prazoMeses*taxaJuros*+this.saldoInicial
+        
+
         console.log("Olá" + this.titular + "dono(a) da conta de numero" + this.numeroConta + " seu investimento de "+valor+" deu resultados, agora você tem " + this.saldoInicial);
 
         }
 }
 const Dudu =new ContaCorrente();
+Dudu.consultarSaldo();
 Dudu.depositar(100);
 Dudu.sacar(1300)
 Dudu.sacar(900);
 Dudu.consultarSaldo();
+console.log(".")
+console.log(".")
+const Emi =new ContaPoupanca();
+Emi.consultarSaldo();
+Emi.depositar(100);
+Emi.sacar(1300)
+Emi.sacar(900);
+Emi.consultarSaldo();
+Emi.calcularRendimentoAnual(0.2);
 
 
