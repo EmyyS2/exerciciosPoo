@@ -7,26 +7,26 @@ class Funcionarios {
 }
 class Gerente extends Funcionarios {
     constructor() {
-        super("Túlio", 15000);
+        super("gerente", 15000);
     }
     calcularSalarioMensal() {
         let soma = this.salario;
         this.salario = soma * 0.10 + soma;
-        console.log("Este é o " + this.nome + " ele ganha R$ " + this.salario);
+        console.log("O " + this.nome + " ganha R$ " + this.salario);
         return soma;
     }
 }
-class Desenvolvidor extends Funcionarios {
+class Desenvolvedor extends Funcionarios {
     constructor() {
-        super("Marcos", 5000);
+        super("desenvolvedor", 5000);
     }
     calcularSalarioMensal() {
         let soma = this.salario;
-        console.log("Este é o " + this.nome + " ele ganha R$ " + this.salario);
+        console.log("O " + this.nome + " ganha R$ " + this.salario);
         return soma;
     }
 }
-const Túlio = new Gerente();
-Túlio.calcularSalarioMensal();
-const Marcos = new Desenvolvidor();
-Marcos.calcularSalarioMensal();
+const gerente = new Gerente();
+gerente.calcularSalarioMensal();
+const desenvolvedor = new Desenvolvedor();
+desenvolvedor.calcularSalarioMensal();
