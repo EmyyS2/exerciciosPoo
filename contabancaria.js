@@ -41,12 +41,11 @@ class ContaPoupanca extends ContaBancariaDois {
         console.log("Olá " + this.titular + " seu deposito foi aceito, atualmenete o/a senhor(a) tem R$ " + this.saldoInicial);
     }
     sacar(valor) {
-        this.saldoInicial = this.saldoInicial - valor;
-        let pegar = " você sacou R$ " + valor + " com sucesso, seu saldo atual é de R$ " + this.saldoInicial;
-        if (this.saldoInicial < valor) {
-            pegar = " Você não tem saldo o sufuciente. Seu saldo atual é de R$ " + (this.saldoInicial + valor);
+        let sacar = "Olá " + this.titular + " dono(a) da conta de numero " + this.numeroConta + " seu saque foi negado, você tem R$ " + this.saldoInicial;
+        if (valor > this.saldoInicial) {
+            sacar = "Olá " + this.titular + " dono(a) da conta de numero " + this.numeroConta + " seu saque foi aceito, você tem R$ " + this.saldoInicial;
         }
-        console.log(this.titular + pegar);
+        console.log(sacar);
     }
     consultarSaldo() {
         this.saldoInicial = this.saldoInicial;
